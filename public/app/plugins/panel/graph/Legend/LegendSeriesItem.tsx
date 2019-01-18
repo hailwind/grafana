@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { TimeSeries } from 'app/core/core';
 import { SeriesColorPicker } from 'app/core/components/colorpicker/SeriesColorPicker';
 
-export const LEGEND_STATS = ['min', 'max', 'avg', 'current', 'total'];
+export const LEGEND_STATS = ['min', 'max', 'avg', 'current', 'total', 'p95'];
 
 export interface LegendLabelProps {
   series: TimeSeries;
@@ -21,6 +21,7 @@ export interface LegendValuesProps {
   avg?: boolean;
   current?: boolean;
   total?: boolean;
+  p95?: boolean;
 }
 
 type LegendItemProps = LegendLabelProps & LegendValuesProps;

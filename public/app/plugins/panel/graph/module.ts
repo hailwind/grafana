@@ -91,6 +91,7 @@ class GraphCtrl extends MetricsPanelCtrl {
       current: false,
       total: false,
       avg: false,
+      p95: false,
     },
     // how null points should be handled
     nullPointMode: 'null',
@@ -288,7 +289,7 @@ class GraphCtrl extends MetricsPanelCtrl {
 
   legendValuesOptionChanged() {
     const legend = this.panel.legend;
-    legend.values = legend.min || legend.max || legend.avg || legend.current || legend.total;
+    legend.values = legend.min || legend.max || legend.avg || legend.current || legend.total || legend.p95;
     this.render();
   }
 
